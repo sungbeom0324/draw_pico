@@ -29,7 +29,7 @@
 #include "RooDataHist.h"
 #include "RooHistPdf.h"
 #include "RooCBShape.h"
-#include "RooMinuit.h"
+// #include "RooMinuit.h"
 #include "RooFormulaVar.h"
 #include "RooAddPdf.h"
 #include "RooGenericPdf.h"

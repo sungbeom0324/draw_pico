@@ -126,7 +126,7 @@ void getValuesFromTexTable(string const & filename, vector<vector<float> > & tab
         rowUncertainties.push_back(0);
       }
     }
-    tableValues.size(); tableUncertainties.size();
+    //tableValues.size(); tableUncertainties.size();
     //for (auto const & valueString : stringList) rowValues.push_back(to_float(valueString));
     if(rowValues.size()!=0) tableValues.push_back(rowValues);
     if(rowUncertainties.size()!=0) tableUncertainties.push_back(rowUncertainties);

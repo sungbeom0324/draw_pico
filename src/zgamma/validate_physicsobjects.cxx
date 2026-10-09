@@ -1280,7 +1280,7 @@ int main() {
     if (b.photon_pflavor()->at(0) != 1)
       return 1.;
     vector<float> dnn_input = {b.photon_pt()->at(0), 
-        fabs(b.photon_eta()->at(0)), b.photon_idmva()->at(0),
+        static_cast<float>(fabs(b.photon_eta()->at(0))), b.photon_idmva()->at(0),
         static_cast<float>(b.photon_energyErr()->at(0)/(b.photon_pt()->at(0)
          *TMath::CosH(b.photon_eta()->at(0))))};
     float dnn_output = dnn_photon_weighter.evaluate(dnn_input);

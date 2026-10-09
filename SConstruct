@@ -15,10 +15,15 @@ def findEnviornment(scriptname, envDict):
   for line in proc.stdout:
     if '{' in line.decode('utf-8'): continue
     if '}' in line.decode('utf-8'): continue
-    t_array= line.decode('utf-8').split("=",1)
-    key=t_array[0]
-    value=t_array[1].rstrip('\n')
+    s = line.decode('utf-8').rstrip('\n')
+    if "=" not in s:
+      continue
+    key, value = s.split("=", 1)
     envDict[key] = value
+    #t_array= line.decode('utf-8').split("=",1)
+    #key=t_array[0]
+    #value=t_array[1].rstrip('\n')
+    #envDict[key] = value
   proc.communicate()
 
 def returnEnviornment(scriptname):
